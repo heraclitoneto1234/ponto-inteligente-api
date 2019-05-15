@@ -1,7 +1,8 @@
 package com.kazale.pontointeligente.api.entities;
 
-import java.awt.List;
+
 import java.io.Serializable;
+import java.util.List;
 
 import javax.annotation.Generated;
 import javax.persistence.Entity;
@@ -23,7 +24,7 @@ public class Empresa implements Serializable {
 	private String cnpj;
 	private Data dataCriacao;
 	private Data dataAtualizacao;
-	/*private List<Funcionarios> Funcionarios;*/
+	private List<Funcionarios> Funcionarios;
 	
 	
 	@Id
@@ -68,12 +69,12 @@ public class Empresa implements Serializable {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 
-/*	public List<Funcionarios> getFuncionarios() {
-		return funcionarios;
+	public List<Funcionarios> getFuncionarios() {
+		return Funcionarios;
 	}
 
 	public void setFuncionarios(List<Funcionarios> funcionarios) {
-		this.funcionarios = funcionarios;
-	}*/
+		this.Funcionarios = funcionarios;
+	}
 
 }
